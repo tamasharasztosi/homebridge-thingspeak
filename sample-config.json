@@ -1,0 +1,39 @@
+{
+    "bridge": {
+        "name": "homebridge-thingspeak",
+        "username": "CC:22:3D:E3:CE:34",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+
+    "description": "Homebridge Plugin based on httpmultisensor with thingspeak support",
+
+    "accessories": [
+
+                {
+                "accessory": "Httpthingspeak",
+                "name": "Temperature",
+                "type": "CurrentTemperature",
+                "manufacturer" : "SensorManu 1",
+                "model": "SensorModel 1",
+                "serial": "SensorSerial 1",
+                "url": "https://api.thingspeak.com/channels/num_of_channel/field/1/last.js$
+                "http_method": "GET",
+                "debug": true
+                },
+
+                {
+                "accessory": "Httpthingspeak",
+                "name": "Humidity",
+                "type": "CurrentRelativeHumidity",
+                "manufacturer" : "SensorManu 1",
+                "model": "SensorModel 1",
+                "serial": "SensorSerial 1",
+                "url": "https://api.thingspeak.com/channels/num_of_channel/field/2/last.js$
+                "http_method": "GET",
+                "debug": true
+                }
+    ],
+
+    "platforms": [ ]
+}
