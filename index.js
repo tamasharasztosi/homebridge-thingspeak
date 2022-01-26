@@ -66,7 +66,6 @@ Httpthingspeak.prototype = {
 			} else {
 				this.debug && this.log('HTTP success. Got result ['+body+']');
 				for(const k in JSON.parse(body)) {
-					this.log(k);
 					if(k.indexOf("field") > -1)
 						var value = parseFloat(JSON.parse(body)[k]);
 				}
